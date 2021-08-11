@@ -10,6 +10,8 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import ChatPage from './components/ChatPage/ChatPage'
+import LandingPage from './components/LandingPage/LandingPage'
 
 class App extends Component {
   constructor (props) {
@@ -86,6 +88,18 @@ class App extends Component {
               <ChangePassword msgAlert={this.msgAlert} user={user} />
             )}
           />
+          <Route
+            path='/chat-page'
+            render={() => (
+              <ChatPage msgAlert={this.msgAlert} setUser={this.setUser} />
+            )}
+          />
+          <Route
+            path='/'
+            render={() => (
+              <LandingPage msgAlert={this.msgAlert} setUser={this.setUser} />
+            )}
+          />
         </main>
       </Fragment>
     )
@@ -93,3 +107,18 @@ class App extends Component {
 }
 
 export default App
+
+// renderChatList={(chatAppState) => {}}
+// renderChatCard={(chat, index) => {}}
+// renderNewChatForm={(creds) => {}}
+// renderChatFeed={(chatAppState) => {}}
+// renderChatHeader={(chat) => {}}
+// renderMessageBubble={(creds, chat, lastMessage, message, nextMessage) => {}}
+// renderSendingMessage={(creds, chat, lastMessage, message, nextMessage) => {}}
+// renderIsTyping={(typers) => {}}
+// renderNewMessageForm={(creds, chatId) => {}}
+// renderChatSettings={(chatAppState) => {}}
+// renderChatSettingsTop={(creds, chat) => {}}
+// renderPeopleSettings={(creds, chat) => {}}
+// renderPhotosSettings={(chat) => {}}
+// renderOptionsSettings={(creds, chat) => {}}
