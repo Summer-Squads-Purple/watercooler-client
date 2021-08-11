@@ -94,8 +94,7 @@ class App extends Component {
               <ChatPage msgAlert={this.msgAlert} setUser={this.setUser} />
             )}
           />
-          <Route
-            path='/'
+          <Route exact path='/'
             render={() => (
               <LandingPage msgAlert={this.msgAlert} setUser={this.setUser} />
             )}
