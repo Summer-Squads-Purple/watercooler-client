@@ -6,6 +6,7 @@ import { signInSuccess, signInFailure } from '../AutoDismissAlert/messages'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import logo from './watercoolerroulettefont-blue.png'
 
 class SignIn extends Component {
   constructor (props) {
@@ -53,6 +54,9 @@ render () {
   return (
     <div className='row'>
       <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+        <div className="logo">
+          <img src={logo} width="300" height="100" alt/>
+        </div>
         <h3>Sign In</h3>
         <Form onSubmit={this.onSignIn}>
           <Form.Group controlId='email'>
